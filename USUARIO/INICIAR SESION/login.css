@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background-color: #D7D6C5;
+}
+#contenido{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#imagen img{
+    position: absolute;
+    z-index: 10;
+    transform: translate(110%, -50%);
+    width: 350px;
+    height: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #D7D6C5;
+}
+#login .container #login-row #login-column{
+    position: relative;
+    margin:auto;
+    max-width: 600px;
+    color: white;
+    height: 600px;
+    background-color: #2D2D2D !important;
+}
+#login .container #login-row #login-column #login-form{
+    margin-top: 150px;
+}
+#login .container #login-row #login-column #login-form h1{
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#login .container #login-row #login-column #login-form .form-group{
+    font-size: 15px;
+    padding: 0 50px 20px 50px;
+}
+#login .container #login-row #login-column #login-form  button{
+    background-color: transparent;
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 500;
+    margin: 30px;
+}
+#login .container #login-row #login-column #login-form  button:hover{
+    color: black;
+    background-color: white;
+    font-weight: 500;
+}
+
+.glyphicon {
+    position: absolute;
+    right: 85px;
+    top: 61%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.registrar{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 500;
+    cursor: pointer;
+}
+@media (max-width: 768px) { 
+    #imagen img{
+        position: absolute;
+        z-index: 10;
+        transform: translate(20%, -50%);
+        width: 350px;
+        height: 10px;
+        max-width: 100%;
+        height: auto;
+        border: 10px solid #D7D6C5;
+    }
+}

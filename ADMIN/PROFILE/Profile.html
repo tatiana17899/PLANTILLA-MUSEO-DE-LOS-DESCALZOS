@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="d-flex" id="contenido">
+      <!-- Sidebar -->
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="sidebar">
+        <div
+          class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+          >
+            <span class="fs-5 d-none d-sm-inline">Museo de los Descalzos</span>
+          </a>
+          <ul
+            class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+            id="menu"
+          >
+            <li class="nav-item">
+              <a href="#" class="nav-link align-middle px-0">
+                <i class="fa-solid fa-sliders"></i>
+                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link align-middle px-0">
+                <i class="fa-solid fa-users"></i>
+                <span class="ms-1 d-none d-sm-inline">Cliente / Usuario</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#submenu1"
+                data-bs-toggle="collapse"
+                class="nav-link px-0 align-middle"
+              >
+                <i class="fa-solid fa-gear"></i>
+                <span class="ms-1 d-none d-sm-inline">Administrar</span>
+              </a>
+              <ul
+                class="collapse show nav flex-column ms-1"
+                id="submenu1"
+                data-bs-parent="#menu"
+              >
+                <li class="w-100">
+                  <a href="#" class="nav-link px-0">
+                    <span class="d-none d-sm-inline">Guías</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <span class="d-none d-sm-inline">Alquileres</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <span class="d-none d-sm-inline">Eventos</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <span class="d-none d-sm-inline">Noticias</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+          <div class="dropdown pb-4">
+            <a
+              href="#"
+              class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="#"
+                alt="hugenerd"
+                width="30"
+                height="30"
+                class="rounded-circle"
+              />
+              <span class="d-none d-sm-inline mx-1">Usuario</span>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-dark text-small shadow"
+              aria-labelledby="dropdownUser1"
+            >
+              <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+              <li><a class="dropdown-item" href="#">Registrarse</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div
+        class="bg-white p-8 rounded-lg shadow-md w-full max-w-md mt-2 center-form"
+      >
+        <div class="flex justify-center mb-6">
+          <img
+            alt="Cute animal with a flower on its head"
+            class="rounded-full"
+            height="100"
+            src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-waP7q2IY6DWspP3pPSGuoGCC.png?st=2024-09-02T00%3A27%3A11Z&amp;se=2024-09-02T02%3A27%3A11Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-02T00%3A15%3A55Z&amp;ske=2024-09-03T00%3A15%3A55Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=i/NxLyNiR62PS4Rgx51T1rNH0QFWvB7hMxnKN%2BonOkU%3D"
+            width="100"
+          />
+          <div class="relative -ml-4">
+            <button class="bg-blue-900 text-white p-2 rounded-full">
+              <i class="fas fa-pen"> </i>
+            </button>
+          </div>
+        </div>
+        <form>
+          <div class="mb-4">
+            <label class="block text-gray-700"> Nombre: </label>
+            <div class="relative">
+              <input
+                class="w-full border border-gray-300 p-2 rounded"
+                type="text"
+                value="Tatiana Mercedes"
+              />
+              <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700"> Apellidos: </label>
+            <div class="relative">
+              <input
+                class="w-full border border-gray-300 p-2 rounded"
+                type="text"
+                value="Suarez Rosas"
+              />
+              <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700"> Email: </label>
+            <div class="relative">
+              <input
+                class="w-full border border-gray-300 p-2 rounded"
+                type="email"
+                value="tatianasuarezrosas332@gmail.com"
+              />
+              <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+            </div>
+          </div>
+          <div class="mb-4 grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700"> Fecha de Nacimiento </label>
+              <div class="relative">
+                <input
+                  class="w-full border border-gray-300 p-2 rounded"
+                  type="text"
+                  value="17/11/04"
+                />
+                <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-700"> N°Documento </label>
+              <div class="relative">
+                <input
+                  class="w-full border border-gray-300 p-2 rounded"
+                  type="text"
+                  value="75087302"
+                />
+                <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4 grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700"> Provincia </label>
+              <div class="relative">
+                <input
+                  class="w-full border border-gray-300 p-2 rounded"
+                  type="text"
+                  value="Lima"
+                />
+                <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-700"> Distrito </label>
+              <div class="relative">
+                <input
+                  class="w-full border border-gray-300 p-2 rounded"
+                  type="text"
+                  value="La Molina"
+                />
+                <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700"> Dirección </label>
+            <div class="relative">
+              <input
+                class="w-full border border-gray-300 p-2 rounded"
+                type="text"
+                value="Calle Cruz del Sur 170 dpt 301, Portada del Sol"
+              />
+              <i class="fas fa-pen absolute right-3 top-3 text-gray-400"> </i>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700"> Contraseña </label>
+            <div class="relative">
+              <input
+                class="w-full border border-gray-300 p-2 rounded"
+                id="password"
+                type="password"
+                value="********"
+              />
+              <i
+                class="fas fa-eye absolute right-3 top-3 text-gray-400 cursor-pointer"
+                id="togglePassword"
+              >
+              </i>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded"
+              type="submit"
+            >
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Offcanvas Sidebar for Mobile -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasSidebar"
+      aria-labelledby="offcanvasSidebarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSidebarLabel">
+          MUSEO DE LOS DESCALZOS
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#"
+            ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
+          >
+          <a class="nav-link" href="#"
+            ><i class="fas fa-users me-2"></i>Clientes-Usuarios</a
+          >
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#offcanvasAdminMenu"
+            aria-expanded="false"
+            aria-controls="offcanvasAdminMenu"
+          >
+            <i class="fas fa-cogs me-2"></i>Administrar
+            <i class="fas fa-chevron-down ms-auto"></i>
+          </a>
+          <div class="collapse" id="offcanvasAdminMenu">
+            <a class="nav-link ms-4" href="#"
+              ><i class="fas fa-arrow-right me-2"></i>Guías</a
+            >
+            <a class="nav-link ms-4" href="#"
+              ><i class="fas fa-arrow-right me-2"></i>Alquileres</a
+            >
+            <a class="nav-link ms-4" href="#"
+              ><i class="fas fa-arrow-right me-2"></i>Eventos</a
+            >
+          </div>
+          <a class="nav-link" href="#"
+            ><i class="fas fa-newspaper me-2"></i>Noticias</a
+          >
+          <a class="nav-link" href="#"
+            ><i class="fas fa-user me-2"></i>Perfil</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+    <script src="profile.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5102c9fd0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo de los Descalzos</title>
+    <!--CSS Style-->
+    <link rel="stylesheet" href="pago.css">
+    <link rel="stylesheet" href="tarjeta.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Icon Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Font Family Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div>
+        <main class="mb-5">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms-3" href="#">MUSEO DE LOS DESCALZOS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0 mx-auto">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link" href="#">
+                                    <span class="material-symbols-outlined">home</span>
+                                    <p class="title-link">Inicio</p>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link" href="#">
+                                    <span class="material-symbols-outlined">attach_money</span>
+                                    <p class="title-link">Tienda</p>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link" href="#">
+                                    <span class="material-symbols-outlined">calendar_month</span>
+                                    <p class="title-link">Visita</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <button class="btn btn-log mx-2" id="login">Iniciar Sesion</button>
+                            <button class="btn btn-reg mx-2" id="register">Registrarse</button>
+                        </form>
+                    </div>        
+                </div>
+            </nav>
+            <div class="container">
+                <h1 class="m-5">Compra tus entradas</h1>
+                <hr>
+                <div class="process m-5 p-1">
+                    <div class="process-row">
+                        <div class="process-step">
+                            <button type="button" style="background-color: #0D0D0D;" class="btn btn-default btn-circle" disabled="disabled"><i class="fa-duotone fa-solid fa-user icon"></i></button></a>
+                        </div>
+                        <div class="process-step">
+                            <a href="#"><button type="button" style="background-color: #3a3a3a;"class="btn btn-default btn-circle" disabled="disabled"><i class="fa-regular fa-credit-card icon"></i></button></a>
+                        </div> 
+                         <div class="process-step">
+                            <button type="button" style="background-color: #b00505;"class="btn btn-default btn-circle" disabled="disabled"><i class="fa-solid fa-check icon"></i></button>
+                         </div> 
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section id="form">
+            <div class="row g-5">
+                <div class="col-md-5 col-lg-4 order-md-last p-2 mt-5">
+                    <div class="container">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-white">Resumen del pedido</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Fecha</h6>
+                                    <hr>
+                                    <i class="fa-regular fa-calendar"></i><small class="text-muted">11 agosto</small>
+                                    <i class="fa-solid fa-timer"></i><small class="text-muted">9:00am-11:00am</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Tu información</h6>
+                                    <hr>
+                                    <small class="text-muted">Tatiana Mercedes</small>
+                                    <small class="text-muted">tatianasuarezrosas332@gmail.com</small>
+                                    <small class="text-muted">Peru (Peru)</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Datos de boleta o factura</h6>
+                                    <hr>
+                                    <small class="text-muted">Boleta</small>
+                                    <small class="text-muted">74087303</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Entradas</h6>
+                                    <hr>
+                                    <small class="text-muted">General</small>
+                                    <small class="text-muted">$10</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (USD)</span>
+                                <strong>$20</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                        <div class="container-sm  tarjeta p-5">
+                            <div class="card-container">
+                                <div class="front">
+                                    <div class="image">
+                                        <img src="chip.png" alt="">
+                                    </div>    
+                                    <div class="card-number-box">################</div>
+                                    <div class="flexbox">
+                                        <div class="box">
+                                            <span>Propietario:</span>
+                                            <div class="card-holder-name">Nombres</div>
+                                        </div>
+                                        <div class="box">
+                                            <span>expires</span>
+                                            <div class="expiration">
+                                                <span class="exp-month">mm</span>
+                                                <span class="exp-year">yy</span>
+                                            </div>
+                                        </div>            
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="stripe"></div>
+                                    <div class="box">
+                                        <span>cvv</span>
+                                        <div class="cvv-box"></div>
+                                        <img src="image/visa.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="">
+                                <div class="inputBox">
+                                    <span>Número de Tarjeta:</span>
+                                    <input type="text" maxlength="16" class="card-number-input">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Nombre de la Tarjeta:</span>
+                                    <input type="text" class="card-holder-input">
+                                </div>
+                                <div class="flexbox">
+                                    <div class="inputBox">
+                                        <span>Expiración mm</span>
+                                        <select name="" id="" class="month-input">
+                                            <option value="month" selected disabled>month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputBox">
+                                        <span>Expiración yy</span>
+                                        <select name="" id="" class="year-input">
+                                            <option value="year" selected disabled>year</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputBox">
+                                        <span>cvv</span>
+                                        <input type="text" maxlength="4" class="cvv-input">
+                                    </div>
+                                </div>
+                                <div id="next" class="text-center p-5">
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                        <button type="button" class="btn submit-btn btn-lg">Atrás</button>
+                                        </div>
+                                        <div class="col-auto">
+                                        <button type="submit" class="btn submit-btn btn-lg">Continuar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>            
+                        </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center">
+            <h3>Visitanos en</h3>
+            <p>Alameda de los Descalzos, Rímac 15093</p>
+            <p>Email:museodescalzos@gmail.com</p>
+            <p class="copyright">© 2024 Museo de los Descalzos. Todos los derechos reservados.</p>
+        </footer>        
+    </div>
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/5102c9fd0f.js" crossorigin="anonymous"></script>
+    <script src="pagoTarjeta.js"></script>
+</body>
+</html>
